@@ -1,0 +1,7 @@
+{{-- Vendor --}}
+
+
+
+
+{{-- Additional --}}
+@stack('scriptsAbove')
