@@ -2,6 +2,5 @@
 
 
 
-
 {{-- Additional --}}
 @stack('scriptsAbove')
