@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', LandingPage::class);
 Route::get('/login', Login::class)->name('login');
+Route::get('admin/dashboard',);
 
 Route::group(['middleware' => config('fortify.middleware', ['web'])], function () {
 
