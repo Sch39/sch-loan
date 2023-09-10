@@ -198,7 +198,7 @@ return [
 
         // additional provider
         App\Providers\FortifyServiceProvider::class,
-
+        Spatie\Permission\PermissionServiceProvider::class,
     ],
 
     /*
