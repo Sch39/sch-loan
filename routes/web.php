@@ -16,4 +16,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', LandingPage::class);
-Route::get('/login', Login::class);
+Route::get('/login', Login::class)->name('login');
+
+Route::group(['middleware' => config('fortify.middleware', ['web'])], function () {
+
+  // with fortify guest middleware
+  Route::get('foo', function () {
+    return 'Foo';
+  })->middleware(['guest']);
+
+  // with fortify auth middleware
+  Route::get('bar', function () {
+    return 'bar';
+  })->middleware(['auth']); // fortify auth middleware
+
+});
