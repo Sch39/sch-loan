@@ -13,12 +13,13 @@ $showFooter = ($layout['showFooter'] ?? false);
   <p class="text-left">NavSide</p>
   @endif
 
-  @if ($showNavTop)
-  <p class="text-center">NavTop</p>
+  --}}
 
+  @if ($showNavTop)
+  @include('sections.pageNavTop')
   @endif
 
-  --}}
+
 
   @yield('content')
 

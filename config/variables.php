@@ -13,9 +13,9 @@ return [
     ],
   ],
 
-  'approver' => [
+  'landing' => [
     'layout' => [
-      'layoutName' => 'approver',
+      'layoutName' => 'landing',
       'showNavSide' => false,
       'showNavTop' => true,
       'showFooter' => true,
