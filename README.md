@@ -68,3 +68,38 @@ Kemudian jalankan comman berikut untuk memulai server backend laravel
 php artisan serve --port=8000
 ```
 Maka aplikasi dapat diakses pada http://localhost:8000
+
+
+## Password dan email login
+
+### Admin
+```
+'username' => 'admin',
+'email' => 'admin@sch39.dev',
+'password' => bcrypt('root'),
+```
+### Approver lv 1
+
+```
+'id' => 2,
+'username' => 'approver 1',
+'email' => 'approver1@sch39.dev',
+'password' => bcrypt('root'),
+
+'id' => 3,
+'username' => 'approver 2',
+'email' => 'approver2@sch39.dev',
+'password' => bcrypt('root'),
+```
+
+### Approver lv 2
+```
+'username' => 'approver 3',
+'email' => 'approver3@sch39.dev',
+'password' => bcrypt('root'),
+
+'username' => 'approver 4',
+'email' => 'approver4@sch39.dev',
+'password' => bcrypt('root'),
+
+```
