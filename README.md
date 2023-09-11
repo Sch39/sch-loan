@@ -53,6 +53,12 @@ cp .env.example .env
 
 Setelahnya edit file .env pada bagian databse dan sesuaikan dengan database yang telah dibuat
 
+## Migrasi database
+Untuk menjalankan migrasi dan seeder bisa menggunakan command berikut.
+```
+php artisan migrate:refresh --seed
+```
+
 ## Run Applikasi
 Untuk merender front end dengan vite dapat menggunakan command berikut
 ```
