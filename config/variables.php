@@ -8,8 +8,8 @@ return [
     'layout' => [
       'layoutName' => 'admin',
       'showNavSide' => true,
-      'showNavTop' => false,
-      'showFooter' => true,
+      'showNavTop' => true,
+      'showFooter' => false,
     ],
   ],
 

@@ -34,8 +34,6 @@ class RolesAndPermissionSeeder extends Seeder
         // create role
         Role::create(['name' => 'admin'])->givePermissionTo(['create loan', 'delete loan', 'edit loan', 'select approver', 'choose driver', 'choose vehicle']);
 
-        Role::create(['name' => 'approver_lv_1'])->givePermissionTo(['approve loan lv 1']);
-
-        Role::create(['name' => 'approver_lv_2'])->givePermissionTo(['approve loan lv 2']);
+        Role::create(['name' => 'approver']);
     }
 }

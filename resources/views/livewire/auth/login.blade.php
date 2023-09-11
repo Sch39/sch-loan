@@ -4,22 +4,38 @@
         <img class="h-[40px] w-[40px] mb-5" src="{{ asset('icon.png') }}" alt="">
         <h1 class="text-xl font-bold text-center pb-5">Sign In to Your Account</h1>
 
+        @if (Auth::check())
+        <p>login</p>
+        @endif
         <form action="{{ route('login') }}" method="POST">
             @csrf
-            {{-- @method(POST) --}}
+
             <div class="bg-white shadow-xl p-10 flex flex-col gap-4 text-sm">
 
 
                 <div>
                     <label class="text-gray-600 font-bold inline-block pb-2" for="email">Email</label>
-                    <input class="border border-gray-400 focus:outline-slate-400 rounded-md w-full shadow-sm px-5 py-2"
-                        type="email" name="email" placeholder="user@sch39.dev">
+                    <input
+                        class="border border-gray-400 focus:outline-slate-400 rounded-md w-full shadow-sm px-5 py-2 @error('email') is-invalid @enderror"
+                        type="email" name="email" placeholder="user@sch39.dev" value="{{ old('email') }}">
+                    @error('email')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                    @enderror
                 </div>
 
                 <div>
                     <label class="text-gray-600 font-bold inline-block pb-2" for="password">Password</label>
-                    <input class="border border-gray-400 focus:outline-slate-400 rounded-md w-full shadow-sm px-5 py-2"
+                    <input
+                        class="border border-gray-400 focus:outline-slate-400 rounded-md w-full shadow-sm px-5 py-2 @error('password') is-invalid @enderror"
                         type="password" name="password" placeholder="******">
+
+                    @error('password')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                    @enderror
                 </div>
 
                 <div class="flex">

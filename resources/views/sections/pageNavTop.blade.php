@@ -4,11 +4,15 @@
       <img src="{{ asset('icon.png') }}" class="h-8 mr-3" alt="Flowbite Logo">
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Sch Loan</span>
     </a>
-    {{-- <div class="flex md:order-2">
-      <button type="button"
-        class="text-white bg-blue-700 hover:ring-2 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm hover:bg-white hover:text-black px-5 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login</button>
+    @if (auth()->check())
 
-    </div> --}}
-
+    <div class="flex md:order-2">
+      <form action="{{ route('logout') }}" method="POST">
+        @csrf
+        <button type="submit"
+          class="text-white bg-blue-700 hover:ring-2 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm hover:bg-white hover:text-black px-5 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Logout</button>
+      </form>
+    </div>
+    @endif
   </div>
 </nav>

@@ -30,12 +30,21 @@
 
 
                     </div>
-                    {{--
-                    <x-button.buttton-gradient /> --}}
 
+
+                    @if (auth()->check())
+                    @hasrole('admin')
+                    <x-button.button-gradient title='Dashboard' icon='bx bx-right-arrow-circle text-xl' href='/admin'
+                        class="text-lg group" />
+                    @else
+                    <x-button.button-gradient title='Dashboard' icon='bx bx-right-arrow-circle text-xl' href='/approver'
+                        class="text-lg group" />
+                    @endhasrole
+                    @else
                     <x-button.button-gradient title='Login' icon='bx bx-right-arrow-circle text-xl' href='/login'
                         class="text-lg group" />
-                    {{-- </x-button.button-gradient> --}}
+                    @endif
+
                 </div>
             </div>
         </div>
@@ -196,7 +205,7 @@
         </div>
     </section>
 
-    <section class="pb-20 relative block bg-gray-900">
+    {{-- <section class="pb-20 relative block bg-gray-900">
         <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
             style="height: 80px;">
             <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
@@ -219,9 +228,9 @@
 
 
         </div>
-    </section>
+    </section> --}}
 
-    <section class="relative block py-24 lg:pt-0 bg-gray-900">
+    {{-- <section class="relative block py-24 lg:pt-0 bg-gray-900">
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap justify-center lg:-mt-64 -mt-48">
                 <div class="w-full lg:w-6/12 px-4">
@@ -266,7 +275,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 </main>
 
 @push('scriptsBelow')
