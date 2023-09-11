@@ -28,7 +28,7 @@ Route::get('/login', Login::class)->name('login');
 
 // with fortify auth middleware
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'role:admin'], function () {
-  Route::redirect('/', 'dashboard');
+  Route::redirect('/', 'admin/dashboard');
 
   Route::get('/dashboard', AdminDashboard::class)->name('dashboard');
   Route::get('/application', AdminApp::class)->name('app');
@@ -36,7 +36,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'role:admin
 
 
 Route::group(['prefix' => 'approver', 'as' => 'approver.', 'middleware' => 'role:approver'], function () {
-  Route::redirect('/', 'dashboard');
+  Route::redirect('/', 'approver/dashboard');
 
   Route::get('/dashboard', ApproverDashboard::class)->name('dashboard');
   Route::get('/application', ApproverApp::class)->name('app');
