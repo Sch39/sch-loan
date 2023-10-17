@@ -40,8 +40,8 @@
 
                 <div class="flex">
                     <div class="w-1/2">
-                        <input type="checkbox" name="remeberMe">
-                        <label for="remeberMe">Remeber me</label>
+                        <input type="checkbox" name="remember">
+                        <label for="remember">Remeber me</label>
                     </div>
                     {{-- <div class="w-1/2">
                         <a class="font-bold text-blue-600" href="">Lupa password ?</a>

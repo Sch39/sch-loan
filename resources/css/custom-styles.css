@@ -119,3 +119,8 @@ table.dataTable thead .sorting_desc {
 .c-sidebar-brand .c-sidebar-brand-full:hover {
     color: inherit;
 }
+
+.c-active{
+    /* color: #fff; */
+    background: #eae;
+}

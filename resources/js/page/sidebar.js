@@ -7,6 +7,13 @@ ToggleClass(side_bar_toggle, 'sidebarTarget', ['-translate-x-full'], ['transform
 ToggleClass(drop_down_toggle, 'dropdownTarget', ['hidden'], ['block']);
 
 
+document.querySelectorAll(".nav-link").forEach((link) => {
+  if (link.href == window.location.href) {
+    link.classList.add("c-active");
+    link.setAttribute("aria-current", "page");
+  }
+});
+
 function ToggleClass(class_collcetion, attr, nd1_class, nd2_class) {
   let default_class = nd1_class;
   let after_event = nd2_class;
